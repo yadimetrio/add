@@ -428,6 +428,11 @@
 													</ToolTip>
 													<ExtendedTooltip name="ГруппаКнопокНедавноЗагруженныеФичиРасширеннаяПодсказка" id="1256"/>
 												</ButtonGroup>
+												<Button name="ТехническаяИнформация1" id="1844">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ТехническаяИнформация</CommandName>
+													<ExtendedTooltip name="ТехническаяИнформация1РасширеннаяПодсказка" id="1845"/>
+												</Button>
 											</ChildItems>
 										</Popup>
 										<Button name="Перезагрузить" id="60">
@@ -1366,16 +1371,21 @@
 											</ToolTip>
 											<ExtendedTooltip name="ГруппаВнешниеИнструментыРасширеннаяПодсказка" id="1788"/>
 											<ChildItems>
+												<ButtonGroup name="Группа8" id="1846">
+													<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="1847"/>
+													<ChildItems>
+														<Button name="ТехническаяИнформация" id="1842">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ТехническаяИнформация</CommandName>
+															<ExtendedTooltip name="ТехническаяИнформацияРасширеннаяПодсказка" id="1843"/>
+														</Button>
+													</ChildItems>
+												</ButtonGroup>
 												<Button name="ВнешнийИнструментБраузерТестов_xddTestRunner" id="1797">
 													<Type>CommandBarButton</Type>
 													<Visible>false</Visible>
 													<CommandName>Form.Command.ВнешнийИнструментБраузерТестов_xddTestRunner</CommandName>
 													<ExtendedTooltip name="ВнешнийИнструментБраузерТестов_xddTestRunnerРасширеннаяПодсказка" id="1798"/>
-												</Button>
-												<Button name="СоздатьОткрытьОтчетAllure" id="1799">
-													<Type>CommandBarButton</Type>
-													<CommandName>Form.Command.ОтобразитьОтчетAllureВБраузере</CommandName>
-													<ExtendedTooltip name="СоздатьОткрытьОтчетAllureРасширеннаяПодсказка" id="1800"/>
 												</Button>
 												<Button name="КомандаГенераторМакетовДанных" id="1789">
 													<Type>CommandBarButton</Type>
@@ -1387,6 +1397,21 @@
 													<CommandName>Form.Command.ПоказатьГУИД</CommandName>
 													<ExtendedTooltip name="КомандаПоказатьГУИДРасширеннаяПодсказка" id="1792"/>
 												</Button>
+												<ButtonGroup name="Группа9" id="1848">
+													<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="1849"/>
+													<ChildItems>
+														<Button name="ПроверитьДублированиеСценариев" id="1850">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ПроверитьДублированиеСценариев</CommandName>
+															<ExtendedTooltip name="ПроверитьДублированиеСценариевРасширеннаяПодсказка" id="1851"/>
+														</Button>
+														<Button name="СоздатьОткрытьОтчетAllure" id="1799">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ОтобразитьОтчетAllureВБраузере</CommandName>
+															<ExtendedTooltip name="СоздатьОткрытьОтчетAllureРасширеннаяПодсказка" id="1800"/>
+														</Button>
+													</ChildItems>
+												</ButtonGroup>
 												<Button name="ФормаКонвертерТестов" id="1793">
 													<Type>CommandBarButton</Type>
 													<CommandName>Form.Command.КонвертерТестов</CommandName>
@@ -2872,6 +2897,31 @@
 											<Width>5</Width>
 											<ContextMenu name="ДеревоТестовИмяКонтекстноеМеню" id="70"/>
 											<ExtendedTooltip name="ДеревоТестовИмяРасширеннаяПодсказка" id="1283"/>
+										</InputField>
+										<InputField name="ДеревоТестовВремяВыполнения" id="1852">
+											<DataPath>Объект.ДеревоТестов.ВремяВыполнения</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Время выполнения теста в секундах</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧН=</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ДеревоТестовВремяВыполненияКонтекстноеМеню" id="1853"/>
+											<ExtendedTooltip name="ДеревоТестовВремяВыполненияРасширеннаяПодсказка" id="1854"/>
 										</InputField>
 										<InputField name="ДеревоТестовПолныйПуть" id="73">
 											<DataPath>Объект.ДеревоТестов.ПолныйПуть</DataPath>
@@ -9123,6 +9173,16 @@
 														<Event name="StartChoice">КаталогПроектаНачалоВыбора</Event>
 													</Events>
 												</InputField>
+												<InputField name="КаталогВнешнихОбработокEDT" id="1839">
+													<DataPath>Объект.КаталогВнешнихОбработокEDT</DataPath>
+													<ChoiceButton>true</ChoiceButton>
+													<ClearButton>true</ClearButton>
+													<ContextMenu name="КаталогВнешнихОбработокEDTКонтекстноеМеню" id="1840"/>
+													<ExtendedTooltip name="КаталогВнешнихОбработокEDTРасширеннаяПодсказка" id="1841"/>
+													<Events>
+														<Event name="StartChoice">КаталогВнешнихОбработокEDTНачалоВыбора</Event>
+													</Events>
+												</InputField>
 												<InputField name="ПоставщикUserSettings" id="1811">
 													<DataPath>Объект.ПоставщикПользовательскихНастроек</DataPath>
 													<ListChoiceMode>true</ListChoiceMode>
@@ -10301,6 +10361,61 @@
 																</CheckBoxField>
 															</ChildItems>
 														</UsualGroup>
+														<Table name="ДанныеАллюрМеток" id="1817">
+															<Representation>List</Representation>
+															<AutoInsertNewRow>true</AutoInsertNewRow>
+															<EnableStartDrag>true</EnableStartDrag>
+															<EnableDrag>true</EnableDrag>
+															<DataPath>Объект.ДанныеАллюрМеток</DataPath>
+															<RowFilter xsi:nil="true"/>
+															<ContextMenu name="ДанныеАллюрМетокКонтекстноеМеню" id="1818"/>
+															<AutoCommandBar name="ДанныеАллюрМетокКоманднаяПанель" id="1819"/>
+															<ExtendedTooltip name="ДанныеАллюрМетокРасширеннаяПодсказка" id="1820"/>
+															<SearchStringAddition name="ДанныеАллюрМетокСтрокаПоиска" id="1821">
+																<AdditionSource>
+																	<Item>ДанныеАллюрМеток</Item>
+																	<Type>SearchStringRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ДанныеАллюрМетокСтрокаПоискаКонтекстноеМеню" id="1822"/>
+																<ExtendedTooltip name="ДанныеАллюрМетокСтрокаПоискаРасширеннаяПодсказка" id="1823"/>
+															</SearchStringAddition>
+															<ViewStatusAddition name="ДанныеАллюрМетокСостояниеПросмотра" id="1824">
+																<AdditionSource>
+																	<Item>ДанныеАллюрМеток</Item>
+																	<Type>ViewStatusRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ДанныеАллюрМетокСостояниеПросмотраКонтекстноеМеню" id="1825"/>
+																<ExtendedTooltip name="ДанныеАллюрМетокСостояниеПросмотраРасширеннаяПодсказка" id="1826"/>
+															</ViewStatusAddition>
+															<SearchControlAddition name="ДанныеАллюрМетокУправлениеПоиском" id="1827">
+																<AdditionSource>
+																	<Item>ДанныеАллюрМеток</Item>
+																	<Type>SearchControl</Type>
+																</AdditionSource>
+																<ContextMenu name="ДанныеАллюрМетокУправлениеПоискомКонтекстноеМеню" id="1828"/>
+																<ExtendedTooltip name="ДанныеАллюрМетокУправлениеПоискомРасширеннаяПодсказка" id="1829"/>
+															</SearchControlAddition>
+															<ChildItems>
+																<InputField name="ДанныеАллюрМетокРегулярноеВыражение" id="1830">
+																	<DataPath>Объект.ДанныеАллюрМеток.РегулярноеВыражение</DataPath>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ДанныеАллюрМетокРегулярноеВыражениеКонтекстноеМеню" id="1831"/>
+																	<ExtendedTooltip name="ДанныеАллюрМетокРегулярноеВыражениеРасширеннаяПодсказка" id="1832"/>
+																</InputField>
+																<InputField name="ДанныеАллюрМетокИмяМетки" id="1833">
+																	<DataPath>Объект.ДанныеАллюрМеток.ИмяМетки</DataPath>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ДанныеАллюрМетокИмяМеткиКонтекстноеМеню" id="1834"/>
+																	<ExtendedTooltip name="ДанныеАллюрМетокИмяМеткиРасширеннаяПодсказка" id="1835"/>
+																</InputField>
+																<InputField name="ДанныеАллюрМетокЗначение" id="1836">
+																	<DataPath>Объект.ДанныеАллюрМеток.Значение</DataPath>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ДанныеАллюрМетокЗначениеКонтекстноеМеню" id="1837"/>
+																	<ExtendedTooltip name="ДанныеАллюрМетокЗначениеРасширеннаяПодсказка" id="1838"/>
+																</InputField>
+															</ChildItems>
+														</Table>
 														<InputField name="КаталогOutputAllure" id="141">
 															<DataPath>Объект.КаталогOutputAllure</DataPath>
 															<Title>
@@ -10826,7 +10941,7 @@
 															<ContextMenu name="ИмяФайлаЛогВыполненияСценариевКонтекстноеМеню" id="1548"/>
 															<ExtendedTooltip name="ИмяФайлаЛогВыполненияСценариевРасширеннаяПодсказка" id="1549"/>
 															<Events>
-																<Event name="StartChoice">КаталогOutputВнутреннийФорматНачалоВыбора</Event>
+																<Event name="StartChoice">ИмяФайлаЛогВыполненияСценариевНачалоВыбора</Event>
 															</Events>
 														</InputField>
 													</ChildItems>
@@ -14784,6 +14899,69 @@
 						</Title>
 						<Type/>
 					</Column>
+					<Column name="ВремяВыполнения" id="11">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Время (сек)</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.ДанныеАллюрМеток">
+					<Column name="РегулярноеВыражение" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Регулярное выражение</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ИмяМетки" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Имя метки</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Значение" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Значение</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
 				</AdditionalColumns>
 			</Columns>
 		</Attribute>
@@ -16362,7 +16540,6 @@
 					<v8:content>Перезагрузить</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Shortcut>F4</Shortcut>
 			<Action>Перезагрузить</Action>
 		</Command>
 		<Command name="ЗагрузитьФичиИзКаталога" id="3">
@@ -18793,6 +18970,40 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьОткрытьОтчетAllure</Action>
+		</Command>
+		<Command name="ПроверитьДублированиеСценариев" id="80">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить дублирование сценариев</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить дублирование сценариев</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьДублированиеСценариев</Action>
+		</Command>
+		<Command name="ТехническаяИнформация" id="81">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Техническая информация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Техническая информация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ShowData</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ТехническаяИнформация</Action>
 		</Command>
 	</Commands>
 </Form>

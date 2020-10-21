@@ -1,15 +1,31 @@
 {
-    "$schema": "https://raw.githubusercontent.com/silverbulleters/vanessa-runner/develop/vanessa-runner-schema.json",
+    "$schema": "https://github.com/vanessa-opensource/vanessa-runner/blob/develop/vanessa-runner-schema.json",
     "default": {
         "--ibconnection": "/F./build/ib",
-        // "--ibconnection": "/F./build/ibservice",
+        // "--ibconnection": "/Smyserver\\mybase",
         "--db-user": "",
         "--db-pwd": "",
         "--workspace": ".",
         "--v8version":"8.3.10",
+        "--locale":"ru",
+        "--language":"ru",
         "--additional": "/DisplayAllFunctions /Lru  /iTaxi ",
-        // "--additional": "/DisplayAllFunctions /Lru  /iTaxi /Debug /DebuggerURL tcp://localhost:1560",
+        // "--additional": "/DisplayAllFunctions /iTaxi /Debug /DebuggerURL tcp://localhost:1561",
         "--ordinaryapp": "-1"
+    },
+    "syntax-check": {
+        "--groupbymetadata":true,
+        "--exception-file":"",
+        "--mode": [
+            "-ExtendedModulesCheck",
+            "-ThinClient",
+             "-WebClient",
+             "-Server",
+             "-ExternalConnection",
+             "-ThickClientOrdinaryApplication"
+        ]
+        // "-Extension" : "ИмяРасширения",
+        // "-AllExtensions" : true
     },
     "vanessa": {
         "--vanessasettings": "./tools/JSON/VBParams8310UF.json",
@@ -23,6 +39,10 @@
         "testsPath": "./tests",
         "--reportsxunit": "ГенераторОтчетаJUnitXML{build/junit.xml};ГенераторОтчетаAllureXMLВерсия2{build/allure/allure.xml}",
         "--xddExitCodePath": "./build/xddExitCodePath.txt",
-        "--pathxunit": "./xddTestRunner.epf"
+        "--pathxunit": "./xddTestRunner.epf",
+        "--testclient" : "::47003",
+        "--testclient-additional" : "/iTaxi"
+        // "--testclient-additional" : "/Debug /DebuggerURL tcp://localhost:1561"
+        // "--testclient-additional" : "/debug -http -attach /debuggerURL http://127.0.0.1:2550"
     }
 }

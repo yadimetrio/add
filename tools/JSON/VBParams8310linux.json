@@ -1,5 +1,5 @@
 ﻿{
-    "$schema":"https://raw.githubusercontent.com/silverbulleters/vanessa-runner/develop/behavior-schema.json",
+    "$schema":"https://github.com/vanessa-opensource/vanessa-runner/develop/behavior-schema.json",
     "ИмяСборки": "8310UF",
     "ВерсияПлатформы": "8.3.10",
     "ВыводитьСообщенияВФайл": "./ServiceBases/Messages 8.3.10 UF no sync.txt",
@@ -9,7 +9,8 @@
     "ПутьКVanessaADD": "./bddRunner.epf",
     "КаталогФич": "$workspaceRoot/./features",
     "КаталогиБиблиотек": [
-        "$instrumentsRoot/./features/libraries"
+        "$instrumentsRoot/features/libraries",
+        "$workspaceRoot/features"
     ],
     "КлиентыТестирования":[
       {
@@ -24,7 +25,11 @@
     ],
     "ВыполнитьСценарии": "Истина",
     "ЗавершитьРаботуСистемы": "Истина",
-    "ЗакрытьTestClientПослеЗапускаСценариев": "Истина",
+    "ЗакрытьTestClientПослеЗапускаСценариев": true,
+    "DebugLog": false,
+    "ПриравниватьPendingКFailed": false,
+    "ВыводитьВЛогВыполнениеШагов": true,
+
     "ДелатьЛогВыполненияСценариевВЖР": "Истина",
     "ДелатьОтчетВФорматеАллюр": "Истина",
     "ДелатьОтчетВФорматеjUnit": "Истина",
@@ -43,12 +48,12 @@
     "ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев": "$workspaceRoot/./ServiceBases/BuildStatus.log",
     "ДобавлятьКИмениСценарияУсловияВыгрузки": "Истина",
     "СписокТеговИсключение": [
-        "IgnoreOnCIMainBuild",
-        "IgnoreOn8310",
-        "IgnoreOnUFBuilds",
-        "Ignore",
-	"Video",
-	"IgnoreOnLinux"
+      "IgnoreOnCIMainBuild",
+      "IgnoreOn8310",
+      "IgnoreOnUFBuilds",
+      "Ignore",
+      "Video",
+      "IgnoreOnLinux"
     ],
     "ДополнительныеПараметры": {
         "КаталогФичДляVBManager": "$workspaceRoot/./features"
